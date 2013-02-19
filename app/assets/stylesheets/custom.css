@@ -1,4 +1,8 @@
-
+body {
+  background: #ccc;
+  color: #591B14;
+  font-family: "Maven Pro", sans-serif;
+}
 /* for active links */
 .navbar .nav > .selected > a, .navbar .nav > .selected > a:hover, .navbar .nav > .selected > a:focus {
   -webkit-box-shadow: none;

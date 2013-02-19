@@ -5,11 +5,11 @@
     <% if Refinery.i18n_enabled? and Refinery::I18n.frontend_locales.many? %>
       <span class='preview'>
         <% speaker.translations.each do |translation| %>
-
+          <% if translation.name.present? %>
             <%= link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),
                          refinery.edit_speakers_admin_speaker_path(speaker, :switch_locale => translation.locale),
                          :class => 'locale' %>
-
+          <% end %>
         <% end %>
       </span>
     <% end %>
