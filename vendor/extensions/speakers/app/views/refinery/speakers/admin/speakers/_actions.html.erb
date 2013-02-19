@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Speakers::Admin::SpeakersController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.speakers_admin_speakers_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_speakers_admin_speaker_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Speakers::Admin::SpeakersController.sortable? && ::Refinery::Speakers::Speaker.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Speakers"),
+                 refinery.speakers_admin_speakers_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Speakers"),
+                 refinery.speakers_admin_speakers_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

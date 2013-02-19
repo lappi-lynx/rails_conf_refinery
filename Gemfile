@@ -53,3 +53,6 @@ gem 'globalize3'
 gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+
+gem 'refinerycms-speakers', :path => 'vendor/extensions'
+gem 'better_errors'

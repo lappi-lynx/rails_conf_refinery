@@ -1,3 +1,9 @@
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-speakers (1.0)
+      refinerycms-core (~> 2.0.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -34,7 +40,11 @@ GEM
       activerecord (>= 3.0.0)
     babosa (0.3.9)
     bcrypt-ruby (3.0.1)
+    better_errors (0.6.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     builder (3.0.4)
+    coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -184,6 +194,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
   coffee-rails (~> 3.2.1)
   globalize3
   jquery-rails (~> 2.0.0)
@@ -192,6 +203,7 @@ DEPENDENCIES
   refinerycms (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
+  refinerycms-speakers!
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

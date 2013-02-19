@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130219124523) do
+ActiveRecord::Schema.define(:version => 20130219130402) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -133,6 +133,30 @@ ActiveRecord::Schema.define(:version => 20130219124523) do
   end
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
+
+  create_table "refinery_speaker_translations", :force => true do |t|
+    t.integer  "refinery_speaker_id"
+    t.string   "locale"
+    t.string   "country"
+    t.text     "description"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "refinery_speaker_translations", ["locale"], :name => "index_refinery_speaker_translations_on_locale"
+  add_index "refinery_speaker_translations", ["refinery_speaker_id"], :name => "index_0555c0ac9d79ceb3474203126eea955d6b312b8b"
+
+  create_table "refinery_speakers", :force => true do |t|
+    t.string   "name"
+    t.string   "country"
+    t.text     "description"
+    t.text     "social_contacts"
+    t.string   "company"
+    t.integer  "photo_id"
+    t.integer  "position"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
