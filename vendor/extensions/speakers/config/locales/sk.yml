@@ -1,0 +1,33 @@
+sk:
+  refinery:
+    plugins:
+      speakers:
+        title: Speakers
+    speakers:
+      admin:
+        speakers:
+          actions:
+            create_new: Pridať Speaker
+            reorder: Preusporiadať Speakers
+            reorder_done: Koniec radenia Speakers
+          records:
+            title: Speakers
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Speakers. Kliknite na "Pridať Speaker"
+              pre pridanie prvého speaker.
+          speaker:
+            view_live_html: Zobraziť náhľad speaker<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť speaker
+            delete: Zmazať speaker
+      speakers:
+        show:
+          other: Daľšie Speakers
+  activerecord:
+    attributes:
+      refinery/speakers/speaker:
+        name: Name
+        country: Country
+        description: Description
+        social_contacts: Social Contacts
+        company: Company
+        photo: Photo

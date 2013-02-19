@@ -1,0 +1,34 @@
+es:
+  refinery:
+    plugins:
+      speakers:
+        title: Speakers
+    speakers:
+      admin:
+        speakers:
+          actions:
+            create_new: Crear nuevo speaker
+            reorder: Reordenar speakers
+            reorder_done: Reordenación de speakers completada
+          records:
+            title: Speakers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay speakers todavía. Pulsa en "Crear nuevo Speaker"
+              para crear tu primer speaker.
+          speaker:
+            view_live_html: Ver este speaker como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este speaker
+            delete: Borrar este speaker para siempre
+      speakers:
+        show:
+          other: Otros speakers
+  activerecord:
+    attributes:
+      refinery/speakers/speaker:
+        name: Name
+        country: Country
+        description: Description
+        social_contacts: Social Contacts
+        company: Company
+        photo: Photo

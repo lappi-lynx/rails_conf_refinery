@@ -1,0 +1,32 @@
+ru:
+  refinery:
+    plugins:
+      speakers:
+        title: Докладчики
+    speakers:
+      admin:
+        speakers:
+          actions:
+            create_new: Добавить докладчика
+            reorder: Изменить сортировку докладчиков
+            reorder_done: Закончить сортировку докладчиков
+          records:
+            title: Докладчики
+            sorry_no_results: Извините, ничего не найдено
+            no_items_yet: Вы еще не создали ни одного докладчика. Нажмите "Добавить докладчика", чтобы добавить первого.
+          speaker:
+            view_live_html: View this speaker live <br/><em>(opens in a new window)</em>
+            edit: Редактировать докладчика
+            delete: Удалить докладчика навсегда
+      speakers:
+        show:
+          other: Остальные докладчики
+  activerecord:
+    attributes:
+      refinery/speakers/speaker:
+        name: Имя
+        country: Страна
+        description: Биография
+        social_contacts: Социальные контакты (twitter, github)
+        company: Компания
+        photo: Фото

@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      speakers:
+        title: Speakers
+    speakers:
+      admin:
+        speakers:
+          actions:
+            create_new: 建立新的 Speaker
+            reorder: 对 Speakers 重新排序
+            reorder_done: 对 Speakers 的重新排序结束
+          records:
+            title: Speakers
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Speakers . 点击 "Add New Speaker" 创建一个speaker.
+          speaker:
+            view_live_html: 查看 speaker 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 speaker
+            delete: 永久删除 speaker
+      speakers:
+        show:
+          other: 其他 Speakers
+  activerecord:
+    attributes:
+      refinery/speakers/speaker:
+        name: Name
+        country: Country
+        description: Description
+        social_contacts: Social Contacts
+        company: Company
+        photo: Photo
