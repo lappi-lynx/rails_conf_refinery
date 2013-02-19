@@ -185,6 +185,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  globalize3
   jquery-rails (~> 2.0.0)
   pg
   rails (= 3.2.12)

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <header id="header">
+      <%= render '/refinery/header' -%>
+    </header>
+    <section id="page" class="container">
+      <%= yield %>
+
+      <footer>
+        <%= render '/refinery/footer' -%>
+      </footer>
+    </section>
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+   <div class="navbar-inner">
+     <div class="container">
+       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </a>
+       <%= link_to Refinery::Core.site_name, refinery.root_path, :class => 'brand' %>
+       <div class="nav-collapse collapse" id="main-menu">
+
+        <%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+
+       </div>
+     </div>
+   </div>
+
+   <div id="nav">
+        <%= language_link %>
+      </div>
+ </div>
