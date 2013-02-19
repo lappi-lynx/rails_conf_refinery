@@ -1,0 +1,33 @@
+fr:
+  refinery:
+    plugins:
+      speakers:
+        title: Speakers
+    speakers:
+      admin:
+        speakers:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Speaker
+            reorder: Réordonner les Speakers
+            reorder_done: Fin de réordonnancement des Speakers
+          records:
+            title: Speakers
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Speaker. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Speaker" pour créer votre premi(er/ère) speaker.
+          speaker:
+            view_live_html: Voir ce(t/tte) speaker <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) speaker
+            delete: Supprimer définitivement ce(t/tte) speaker
+      speakers:
+        show:
+          other: Autres Speakers
+  activerecord:
+    attributes:
+      refinery/speakers/speaker:
+        name: Name
+        country: Country
+        description: Description
+        social_contacts: Social Contacts
+        company: Company
+        photo: Photo

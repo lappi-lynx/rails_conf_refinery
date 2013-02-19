@@ -1,0 +1,34 @@
+nb:
+  refinery:
+    plugins:
+      speakers:
+        title: Speakers
+    speakers:
+      admin:
+        speakers:
+          actions:
+            create_new: Lag en ny Speaker
+            reorder: Endre rekkefølgen på Speakers
+            reorder_done: Ferdig å endre rekkefølgen Speakers
+          records:
+            title: Speakers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Speakers enda. Klikk på "Lag en ny Speaker"
+              for å legge til din første speaker.
+          speaker:
+            view_live_html: Vis hvordan denne speaker ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne speaker
+            delete: Fjern denne speaker permanent
+      speakers:
+        show:
+          other: Andre Speakers
+  activerecord:
+    attributes:
+      refinery/speakers/speaker:
+        name: Name
+        country: Country
+        description: Description
+        social_contacts: Social Contacts
+        company: Company
+        photo: Photo
