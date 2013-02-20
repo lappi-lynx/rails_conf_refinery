@@ -1,6 +1,7 @@
 en:
   en: English
   ru: Русский
+  join: Register
   refinery:
     js:
       admin:
