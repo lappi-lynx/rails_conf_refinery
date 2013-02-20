@@ -1,4 +1,5 @@
 ru:
+  join: Регистрация
   refinery:
     plugins:
       refinery_core:

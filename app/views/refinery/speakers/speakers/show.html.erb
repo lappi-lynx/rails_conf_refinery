@@ -1,0 +1,41 @@
+<% content_for :body_content_title do %>
+  <h5>Speaker</h5>
+<% end %>
+
+<% content_for :body do %>
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Description</th>
+      <th>Social Contacts</th>
+      <th>Company</th>
+      <th>Photo</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%=raw @speaker.name %></td>
+        <td><%=raw @speaker.country %></td>
+        <td><%=raw @speaker.description %></td>
+        <td><%=raw @speaker.social_contacts %></td>
+        <td><%=raw @speaker.company %></td>
+        <td><%= image_fu @speaker.photo, nil %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="speakers">
+      <% @speakers.each do |speaker| %>
+        <li>
+          <%= link_to speaker.name, refinery.speakers_speaker_path(speaker) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

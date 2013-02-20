@@ -13,7 +13,7 @@ class CreateSpeakersSpeakers < ActiveRecord::Migration
       t.timestamps
     end
 
-    Refinery::Speakers::Speaker.create_translation_table! :country => :string, :description => :text
+    Refinery::Speakers::Speaker.create_translation_table! :name => :string, :country => :string, :description => :text
 
   end
 

@@ -5,7 +5,7 @@ module Refinery
 
       attr_accessible :name, :country, :description, :social_contacts, :company, :photo_id, :position
 
-      translates :country, :description
+      translates :name, :country, :description
 
       class Translation
         attr_accessible :locale

@@ -8,12 +8,20 @@
     <header id="header">
       <%= render '/refinery/header' -%>
     </header>
-    <section id="page" class="container">
-      <%= yield %>
+    <section class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2" id="sidebar">
+          <%= render '/refinery/sidebar' -%>
+        </div>
+        <div class="span10 wrapper">
+          <%= yield %>
 
-      <footer>
-        <%= render '/refinery/footer' -%>
-      </footer>
+          <footer>
+            <%= render '/refinery/footer' -%>
+          </footer>
+        </div>
+      </div>
+
     </section>
     <%= render '/refinery/javascripts' %>
   </body>

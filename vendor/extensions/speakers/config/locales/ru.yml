@@ -15,7 +15,7 @@ ru:
             sorry_no_results: Извините, ничего не найдено
             no_items_yet: Вы еще не создали ни одного докладчика. Нажмите "Добавить докладчика", чтобы добавить первого.
           speaker:
-            view_live_html: View this speaker live <br/><em>(opens in a new window)</em>
+            view_live_html: Предосмотр <br/><em>(откроется в новом окне)</em>
             edit: Редактировать докладчика
             delete: Удалить докладчика навсегда
       speakers:

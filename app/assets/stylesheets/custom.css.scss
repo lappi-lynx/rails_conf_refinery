@@ -1,0 +1,30 @@
+body {
+  background: #ccc;
+  color: #591B14;
+  font-family: "Maven Pro", sans-serif;
+
+  #sidebar {
+      background: #999;
+      border-right: 1px solid #591B14;
+      border-bottom: 1px solid #591B14;
+      float: left;
+      height: 100%;
+      min-height: 500px;
+      top: 40px;
+      width: 250px;
+      z-index: 300;
+  }
+
+  .wrapper {
+
+  }
+
+  .switch-lang {
+    float: left;
+  }
+}
+
+
+body > .container-fluid {
+  padding: 0;
+}

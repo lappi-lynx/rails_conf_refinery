@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20130219130402) do
   create_table "refinery_speaker_translations", :force => true do |t|
     t.integer  "refinery_speaker_id"
     t.string   "locale"
+    t.string   "name"
     t.string   "country"
     t.text     "description"
     t.datetime "created_at",          :null => false

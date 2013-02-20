@@ -1,40 +1,38 @@
-<% content_for :body_content_title do %>
-  <%= @speaker.name %>
-<% end %>
+
 
 <% content_for :body do %>
   <section>
-    <h1>Name</h1>
+    <h5>Name</h5>
     <p>
       <%=raw @speaker.name %>
     </p>
   </section>
   <section>
-    <h1>Country</h1>
+    <h5>Country</h5>
     <p>
       <%=raw @speaker.country %>
     </p>
   </section>
   <section>
-    <h1>Description</h1>
+    <h5>Description</h5>
     <p>
       <%=raw @speaker.description %>
     </p>
   </section>
   <section>
-    <h1>Social Contacts</h1>
+    <h5>Social Contacts</h5>
     <p>
       <%=raw @speaker.social_contacts %>
     </p>
   </section>
   <section>
-    <h1>Company</h1>
+    <h5>Company</h5>
     <p>
       <%=raw @speaker.company %>
     </p>
   </section>
   <section>
-    <h1>Photo</h1>
+    <h5>Photo</h5>
     <p>
       <%= image_fu @speaker.photo, nil %>
     </p>
