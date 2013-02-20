@@ -1,20 +1,24 @@
 <section id="body_content">
   <section id="body">
     <div id="speakers">
-      <table class="table">
-        <% @speakers.in_groups_of(3, false) do |row_speakers| %>
-          <tr>
-            <% row_speakers.each do |speaker| %>
-              <td><strong><%= speaker.name %></strong></td>
-              <td><%= image_fu speaker.photo, "200x200", class: "image-align-#{cycle("left", "right")}" %></td>
-              <td>
-                <%=raw speaker.description %>
-                <p class="more_info"><%= link_to "More Information", refinery.speakers_speaker_path(speaker), :class => 'btn btn-primary' %></p>
-              </td>
-            <% end %>
-          </tr>
-        <% end %>
-      </table>
+      <% @speakers.each do |speaker| %>
+        <div class="speaker_container">
+          <div class="speaker_avatar">
+            <%= image_fu speaker.photo, "200x200" %>
+          </div>
+
+          <div class="speaker_name">
+            <%= speaker.name %>
+          </div>
+
+          <div class="speaker_description">
+            <%=raw speaker.description %>
+          </div>
+          <div class="speaker_morelink">
+            <p class="more_info"><%= link_to "More Information", refinery.speakers_speaker_path(speaker), :class => 'btn btn-primary' %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </section>
 </section>
