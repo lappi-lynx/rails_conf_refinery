@@ -9,8 +9,8 @@ if (typeof(custom_wymeditor_boot_options) == "undefined") { custom_wymeditor_boo
 
 $(document).ready(function() {
   $(".wymupdate.button").live("click", function() {
-    $(".social").each(function() {
-      $(this).find("input").attr("name", "speaker[social_contacts][" + $(this).find("#speaker_github option:selected").text() + "][]");
+    $(".social input").each(function() {
+      $(this).attr("name", "speaker[social_contacts][" + $(this).find("#speaker_github option:selected").text() + "][]");
     });
   });
 });

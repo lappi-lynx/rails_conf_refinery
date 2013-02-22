@@ -74,7 +74,12 @@
 
 
 
-
+  <div class='field social'>
+    <%- @speaker.social_contacts.each do |key, value| %>
+      <%= f.text_field :social_contacts, :value => value.join %>
+      <%= f.select :github, Refinery::SocialContact.values_for_select, :selected => key %><br>
+    <% end %>
+  </div>
 
   <div class='field'>
     <%= f.label :photo -%>
