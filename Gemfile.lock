@@ -20,6 +20,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_enum (0.9.12)
+      activesupport (~> 3.0)
     activemodel (3.2.12)
       activesupport (= 3.2.12)
       builder (~> 3.0.0)
@@ -170,6 +172,9 @@ GEM
       tilt (~> 1.3)
     seo_meta (1.3.0)
       railties (>= 3.0.0)
+    simple_form (2.0.4)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -194,6 +199,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_enum
   better_errors
   coffee-rails (~> 3.2.1)
   globalize3
@@ -205,5 +211,6 @@ DEPENDENCIES
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-speakers!
   sass-rails (~> 3.2.3)
+  simple_form
   sqlite3
   uglifier (>= 1.0.3)

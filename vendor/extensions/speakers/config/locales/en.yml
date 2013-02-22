@@ -28,6 +28,6 @@ en:
         name: Name
         country: Country
         description: Description
-        social_contacts: Social Contacts
+        social_contacts: Social Contacts. If need multiple accounts - separate it by space
         company: Company
         photo: Photo

@@ -56,3 +56,5 @@ gem 'refinerycms-inquiries', '~> 2.0.0'
 
 gem 'refinerycms-speakers', :path => 'vendor/extensions'
 gem 'better_errors'
+gem 'active_enum'
+gem 'simple_form'
