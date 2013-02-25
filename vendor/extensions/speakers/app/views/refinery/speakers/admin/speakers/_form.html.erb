@@ -48,38 +48,14 @@
   </div>
 
 
-  <div class='field social'>
-    <%= f.label :social_contacts -%>
-    <%= f.text_field :social_contacts -%>
-    <%= f.select :github, Refinery::SocialContact.values_for_select -%>
-  </div>
-
-  <div class='field social'>
-    <%= f.label :social_contacts -%>
-    <%= f.text_field :social_contacts -%>
-    <%= f.select :github, Refinery::SocialContact.values_for_select -%>
-  </div>
-
-  <div class='field social'>
-    <%= f.label :social_contacts -%>
-    <%= f.text_field :social_contacts -%>
-    <%= f.select :github, Refinery::SocialContact.values_for_select -%>
-  </div>
-
-  <div class='field social'>
-    <%= f.label :social_contacts -%>
-    <%= f.text_field :social_contacts -%>
-    <%= f.select :github, Refinery::SocialContact.values_for_select -%>
-  </div>
-
-
-
-  <div class='field social'>
+  <%= f.fields_for :social_contacts, @speaker.social_contacts do |contact| %>
     <%- @speaker.social_contacts.each do |key, value| %>
-      <%= f.text_field :social_contacts, :value => value.join %>
-      <%= f.select :github, Refinery::SocialContact.values_for_select, :selected => key %><br>
+      <%= contact.text_field :value, :value => value -%>
+      <%= contact.select :name, Refinery::SocialContact.values_for_select -%>
     <% end %>
-  </div>
+
+  <% end %>
+
 
   <div class='field'>
     <%= f.label :photo -%>
