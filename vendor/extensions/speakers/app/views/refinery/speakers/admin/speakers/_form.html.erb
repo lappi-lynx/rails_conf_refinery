@@ -46,15 +46,41 @@
     <%= f.label :company -%>
     <%= f.text_field :company  -%>
   </div>
+  <div class="ddd">
+  <%= f.fields_for :social_contacts, :index => '' do |contact| %>
+    <%= f.label :social_contacts %>
+    <% if @speaker.social_contacts.present? %>
 
-
-  <%= f.fields_for :social_contacts, @speaker.social_contacts do |contact| %>
-    <%- @speaker.social_contacts.each do |key, value| %>
-      <%= contact.text_field :value, :value => value -%>
-      <%= contact.select :name, Refinery::SocialContact.values_for_select -%>
+      <% @speaker.social_contacts.each do |sc| %>
+        <div class='field'>
+          <%= contact.text_field :value, :value => sc["value"] %>
+          <%= contact.select :name, Refinery::Speakers::Speaker.contacts_for_select, :selected => sc["name"] %>
+        </div>
+      <% end %>
+    <% else %>
+      <%= render 'add_contact', :remote => true, :contact => contact %>
     <% end %>
+    <b class="www">add contact</b>
+    <div class="zzz">
+      <!-- Test input -->
+      <div class='field'>
+        <%= contact.text_field :value %>
+        <%= contact.select :name, Refinery::Speakers::Speaker.contacts_for_select %>
+      </div>
+      <!-- /Test input -->
 
+      <!-- script for add inputs -->
+      <script type="text/javascript">
+        $('.www').live('click', function(){
+          $(".ddd .zzz").append("<%= j render 'add_contact', :remote => true, :contact => contact %>")
+        })
+      </script>
+      <!-- /script for add inputs -->
+
+    </div>
   <% end %>
+</div>
+
 
 
   <div class='field'>

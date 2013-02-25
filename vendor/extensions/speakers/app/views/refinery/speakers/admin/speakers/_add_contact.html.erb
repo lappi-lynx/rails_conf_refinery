@@ -1,0 +1,4 @@
+<div class='field'>
+  <%= contact.text_field :value %>
+  <%= contact.select :name, Refinery::Speakers::Speaker.contacts_for_select %>
+</div>

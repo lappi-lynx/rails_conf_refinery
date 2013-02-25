@@ -3,13 +3,9 @@ module Refinery
     class Speaker < Refinery::Core::BaseModel
       serialize :social_contacts, Array
 
-      # enumerate :social_contacts, :with => Refinery::SocialContact
-
       self.table_name = 'refinery_speakers'
 
-      attr_accessible :name, :country, :description, :social_contacts, :company, :photo_id, :position, :github
-
-      attr_accessor :github
+      attr_accessible :name, :country, :description, :social_contacts, :company, :photo_id, :position
 
       translates :name, :country, :description
 
@@ -21,9 +17,13 @@ module Refinery
 
       validates :name, :presence => true, :uniqueness => true
 
-      # validates :github, :presence => true
-
       belongs_to :photo, :class_name => '::Refinery::Image'
+
+      class << self
+        def contacts_for_select
+          ['github', 'twitter', 'facebook', 'google_plus']
+        end
+      end
     end
   end
 end
