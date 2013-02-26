@@ -17,9 +17,9 @@
         <td><%=raw @speaker.name %></td>
         <td><%=raw @speaker.country %></td>
         <td><%=raw @speaker.description %></td>
-        <td><%=raw @speaker.social_contacts %></td>
+        <td><%= show_contact @speaker.social_contacts %></td>
         <td><%=raw @speaker.company %></td>
-        <td><%= image_fu @speaker.photo, nil %></td>
+        <td><%= image_fu @speaker.photo, "300x300" %></td>
       </tr>
     </tbody>
   </table>

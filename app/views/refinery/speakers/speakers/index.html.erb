@@ -12,13 +12,7 @@
           </div>
 
           <div class="speaker_contacts">
-            <% speaker.social_contacts.each do |contact| %>
-              <%- if contact[:value].present? %>
-              <div>
-                <b><%= contact[:name] %>:</b> <%= contact[:value] %>
-              </div>
-              <% end %>
-            <% end %>
+            <%= show_contact speaker.social_contacts %>
           </div>
 
           <div class="speaker_description">
