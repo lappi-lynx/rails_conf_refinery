@@ -27,6 +27,6 @@ ru:
         name: Имя
         country: Страна
         description: Биография
-        social_contacts: Социальные контакты (github, twitter). Если нужно несколько аккаунтов, разделите их пробелом
+        social_contacts: Социальные контакты (github, twitter и т.д.)
         company: Компания
         photo: Фото

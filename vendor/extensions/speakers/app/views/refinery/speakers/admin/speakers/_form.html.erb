@@ -39,49 +39,38 @@
 
   </div>
 
-
-  </div>
-
   <div class='field'>
     <%= f.label :company -%>
     <%= f.text_field :company  -%>
   </div>
-  <div class="ddd">
-  <%= f.fields_for :social_contacts, :index => '' do |contact| %>
-    <%= f.label :social_contacts %>
-    <% if @speaker.social_contacts.present? %>
 
-      <% @speaker.social_contacts.each do |sc| %>
-        <div class='field'>
-          <%= contact.text_field :value, :value => sc["value"] %>
-          <%= contact.select :name, Refinery::Speakers::Speaker.contacts_for_select, :selected => sc["name"] %>
-        </div>
+  <div class="social_contacts">
+    <%= f.fields_for :social_contacts, :index => '' do |contact| %>
+      <%= f.label :social_contacts %>
+      <% if @speaker.social_contacts.present? %>
+        <% @speaker.social_contacts.each do |sc| %>
+          <%- if sc['value'].present? %>
+            <div class='field'>
+              <%= contact.text_field :value, :value => sc["value"] %>
+              <%= contact.select :name, Refinery::Speakers::Speaker.contacts_for_select, :selected => sc["name"] %>
+            </div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= render 'add_contact', :contact => contact %>
       <% end %>
-    <% else %>
-      <%= render 'add_contact', :remote => true, :contact => contact %>
-    <% end %>
-    <b class="www">add contact</b>
-    <div class="zzz">
-      <!-- Test input -->
-      <div class='field'>
-        <%= contact.text_field :value %>
-        <%= contact.select :name, Refinery::Speakers::Speaker.contacts_for_select %>
+      <div class="add_field"><i class="plus"></i><%= t('add_contact') %></div>
+      <div class="added_fields">
+        <!-- script for add inputs -->
+        <script type="text/javascript">
+          $('.add_field').live('click', function(){
+            $(".social_contacts .added_fields").append("<%= j render 'add_contact', :remote => true, :contact => contact %>")
+          })
+        </script>
+        <!-- /script for add inputs -->
       </div>
-      <!-- /Test input -->
-
-      <!-- script for add inputs -->
-      <script type="text/javascript">
-        $('.www').live('click', function(){
-          $(".ddd .zzz").append("<%= j render 'add_contact', :remote => true, :contact => contact %>")
-        })
-      </script>
-      <!-- /script for add inputs -->
-
-    </div>
-  <% end %>
-</div>
-
-
+    <% end %>
+  </div>
 
   <div class='field'>
     <%= f.label :photo -%>

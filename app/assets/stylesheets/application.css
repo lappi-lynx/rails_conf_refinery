@@ -11,6 +11,10 @@
  *= require theme
  *= require formatting
  *= require home
+ *= require docs
+ *= require bootstrap
+ *= require bootstrap-responsive
  *= require_self
+ *= require custom
  *= require_tree .
  */

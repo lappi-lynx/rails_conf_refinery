@@ -1,5 +1,6 @@
 ru:
   join: Регистрация
+  add_contact: Добавить аккаунт
   refinery:
     plugins:
       refinery_core:
