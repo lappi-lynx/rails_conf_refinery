@@ -11,15 +11,26 @@
             <%= speaker.name %>
           </div>
 
+          <div class="speaker_contacts">
+            <% speaker.social_contacts.each do |contact| %>
+              <%- if contact[:value].present? %>
+              <div>
+                <b><%= contact[:name] %>:</b> <%= contact[:value] %>
+              </div>
+              <% end %>
+            <% end %>
+          </div>
+
           <div class="speaker_description">
             <%=raw speaker.description %>
           </div>
           <div class="speaker_morelink">
-            <p class="more_info"><%= link_to "More Information", refinery.speakers_speaker_path(speaker), :class => 'btn btn-primary' %></p>
+            <p class="more_info">
+              <%= link_to "More Information", refinery.speakers_speaker_path(speaker), :class => 'btn btn-primary' %>
+            </p>
           </div>
         </div>
       <% end %>
     </div>
   </section>
 </section>
-
